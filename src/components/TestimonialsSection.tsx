@@ -118,7 +118,7 @@ function TestimonialCard({ quote, name, role, avatar }: CardData) {
     <div className="group rounded-[12px] p-4 w-full md:w-[372px] shrink-0 flex flex-col gap-[10px] overflow-hidden bg-[#e4f3ff] dark:bg-[#1a2744] hover:bg-[#1a7cff] dark:hover:bg-[#1a7cff] transition-all duration-300 cursor-pointer hover:shadow-[0_8px_32px_rgba(20,105,238,0.22)]">
       <div className="flex gap-[10px] items-start">
         <div className="relative size-[100px] rounded-[8px] overflow-hidden shrink-0">
-          <Image src={avatar} alt={name} fill className="object-cover" />
+          <Image src={avatar} alt={name} fill sizes="100px" className="object-cover" />
         </div>
         <div className="flex flex-col gap-[10px]">
           <p className="font-['Satoshi'] font-light text-[14px] leading-[18px] text-[#000029] dark:text-[#e2e8f0] group-hover:text-white transition-colors duration-300">
@@ -245,7 +245,7 @@ export default function TestimonialsSection() {
                 Testimonials
               </span>
             </div>
-            <h2 className="font-['Satoshi'] font-medium text-[28px] leading-[36px] text-[#000029] dark:text-white">
+            <h2 className="font-['Satoshi'] font-medium text-[28px] leading-[28px] text-[#000029] dark:text-white">
               Trusted by importers, manufacturers, and growing businesses worldwide
             </h2>
           </div>

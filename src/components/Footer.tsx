@@ -18,7 +18,7 @@ export default function Footer() {
             <h2
               data-animate-up
               data-delay="0"
-              className="font-['Satoshi'] font-medium text-[32px] md:text-[48px] leading-[40px] md:leading-[56px] tracking-[0.144px] text-[#e2f2ff]"
+              className="font-['Satoshi'] font-medium text-[32px] md:text-[48px] leading-[28px] md:leading-[56px] tracking-[0.144px] text-[#e2f2ff]"
             >
               Ready for a smarter way to source
             </h2>

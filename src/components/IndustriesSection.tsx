@@ -49,7 +49,7 @@ function IndustryCard({
       <div className="absolute inset-0 bg-[#0063e8]" />
 
       {/* Product image */}
-      <Image src={image} alt={title} fill className="object-cover" />
+      <Image src={image} alt={title} fill sizes="(max-width: 640px) calc(100vw - 3rem), (max-width: 1024px) calc(50vw - 36px), 360px" className="object-cover" />
 
       {/* Default overlay: blue top ~53% */}
       <div className="absolute top-0 left-0 w-full h-[190px] bg-[rgba(26,124,255,0.9)] group-hover:opacity-0 transition-opacity duration-300" />
@@ -78,7 +78,7 @@ export default function IndustriesSection() {
     <section id="industries" className="dot-bg bg-white dark:bg-[#0a0f1e] py-16 px-6">
       <div className="max-w-[1128px] mx-auto flex flex-col gap-12 items-center">
         {/* Heading */}
-        <h2 data-animate-up data-delay="0" className="font-['Satoshi'] font-medium text-[42px] leading-[52px] tracking-[-0.96px] text-center">
+        <h2 data-animate-up data-delay="0" className="font-['Satoshi'] font-medium text-[28px] md:text-[42px] leading-[28px] md:leading-[52px] tracking-[-0.96px] text-center">
           <span className="text-[#000029] dark:text-white">Import confidently through verified </span>
           <br />
           <span className="text-[#0063e8]">supplier across industries</span>

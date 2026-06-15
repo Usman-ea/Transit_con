@@ -111,6 +111,7 @@ export default function HeroSection() {
                   src={HERO_IMAGES[active]}
                   alt="Shipping port"
                   fill
+                  sizes="(max-width: 768px) calc(100vw - 3rem), 562px"
                   className="object-cover"
                   priority={active === 0}
                 />
@@ -127,6 +128,7 @@ export default function HeroSection() {
                     src={HERO_IMAGES[1 - active]}
                     alt="Shipping port"
                     fill
+                    sizes="(max-width: 768px) calc(100vw - 3rem), 562px"
                     className="object-cover"
                   />
                 </div>

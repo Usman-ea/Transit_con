@@ -100,7 +100,7 @@ export default function StepsSection() {
               See how TransitCon works
             </span>
           </div>
-          <h2 data-animate-up data-delay="150" className="font-['Satoshi'] font-medium text-[28px] md:text-[42px] leading-[36px] md:leading-[52px] tracking-[-0.96px] text-[#000029] dark:text-white max-w-[1005px]">
+          <h2 data-animate-up data-delay="150" className="font-['Satoshi'] font-medium text-[28px] md:text-[42px] leading-[28px] md:leading-[52px] tracking-[-0.96px] text-[#000029] dark:text-white max-w-[1005px]">
             Source globally and execute every transaction with visibility, trust, and control.
           </h2>
         </div>
@@ -137,7 +137,7 @@ export default function StepsSection() {
             >
               {/* Mobile layout: image top, text below — aligned to top so tall content isn't clipped */}
               <div
-                className="flex md:hidden flex-col gap-4 w-full absolute inset-x-6 top-6"
+                className="flex md:hidden flex-col gap-4 absolute inset-x-6 top-6"
                 style={i === activeStep ? {
                   animation: "stepContentUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 100ms both",
                 } : undefined}
@@ -148,7 +148,7 @@ export default function StepsSection() {
                     alt={step.title}
                     fill
                     className="object-cover"
-                    sizes="calc(100vw - 2rem)"
+                    sizes="calc(100vw - 3rem)"
                     style={i === activeStep ? {
                       animation: "stepIllustrationUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 160ms both",
                     } : { transform: "translateY(100%)" }}
