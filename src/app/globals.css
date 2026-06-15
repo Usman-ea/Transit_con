@@ -1,0 +1,95 @@
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap");
+@import "tailwindcss";
+
+/* Class-based dark mode — overrides the built-in prefers-color-scheme dark variant */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+.dark {
+  --background: #0a0f1e;
+  --foreground: #e2e8f0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dot-bg {
+  background-image: radial-gradient(circle, #d1d5db 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+.dark .dot-bg {
+  background-image: radial-gradient(circle, #1e2d47 1.2px, transparent 1.2px);
+}
+
+/* Scroll-triggered fade-in-from-left */
+[data-animate] {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+[data-animate].in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scroll-triggered fade-in-from-bottom */
+[data-animate-up] {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 2.5s ease-out, transform 2.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+[data-animate-up].in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes heroSlideOut {
+  0%   { transform: translateX(0);     opacity: 1; }
+  100% { transform: translateX(-100%); opacity: 0.2; }
+}
+@keyframes heroSlideIn {
+  0%   { transform: translateX(100%); opacity: 0.2; }
+  75%  { transform: translateX(-6px);  opacity: 1; }
+  100% { transform: translateX(0);     opacity: 1; }
+}
+
+@keyframes wordReveal {
+  from { opacity: 0.2; }
+  to   { opacity: 1; }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes stepIllustrationUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes stepContentUp {
+  from { transform: translateY(48px); opacity: 0.4; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+
+@keyframes waveBar {
+  from { transform: scaleY(0.25); }
+  to   { transform: scaleY(1); }
+}
